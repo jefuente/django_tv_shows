@@ -23,11 +23,11 @@
                             <td>{{tvs.id}}</td>
                             <td>{{tvs.title}}</td>
                             <td>{{tvs.network}}</td>
-                            <td>{{tvs.release_date}}</td>
+                            <td>{{tvs.release_date|date:"F d, Y"}}</td>
                             <td><a href="/shows/{{tvs.id}}">Show</a> - <a href="shows/{{tvs.id}}/edit">Edit</a> - <a href="shows/{{tvs.id}}/destroy">Delete</a></td>
                         </tr>
                         {% endfor %}
-                       
+                    
                 </tbody>   
                 </table>  
                 <a href="/shows/new" >Add New Show</a>
