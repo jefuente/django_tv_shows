@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block contenido %} 
+
+    <div class='row'>
+
+        <div class='col-sm-12 col-lg-8 offset-lg-2'>
+            <h3>All Shows</h3>
+            <table class ="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Network</th>
+                        <th>Release Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>       
+
+                <tbody>
+                        {% for tvs in programas_tv %}
+                        <tr>
+                            <td>{{tvs.id}}</td>
+                            <td>{{tvs.title}}</td>
+                            <td>{{tvs.network}}</td>
+                            <td>{{tvs.release_date}}</td>
+                            <td><a href="/shows/{{tvs.id}}">Show</a> - <a href="shows/{{tvs.id}}/edit">Edit</a> - <a href="shows/{{tvs.id}}/destroy">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                       
+                </tbody>   
+                </table>  
+                <a href="/shows/new" >Add New Show</a>
+                
+        </div>
+
+
+
+
+{% endblock %}

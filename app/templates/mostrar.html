@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class='row'>
+
+        <div class='col-sm-12 col-lg-8 offset-lg-2'>
+            <h3>TV Show {{id}}</h3>                   
+            
+            <p>Title: {{programa.title}}</p>
+            <p>Network: {{programa.network}}</p>
+            <p>Release Date: {{programa.release_date}}</p>
+            <p>Description: {{programa.description}}</p>
+            <a href="/shows/{{id}}/edit">Edit</a> - <a href="/shows/{{id}}/destroy">Delete</a>                   
+                
+        </div>
+
+
+{% endblock %}
