@@ -20,7 +20,7 @@ class ShowManager(models.Manager):
         return errors
 
 class Show(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
     network = models.CharField(max_length=80)
     release_date = models.DateField()
     description = models.CharField(max_length=300)
